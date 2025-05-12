@@ -1,0 +1,74 @@
+﻿<Window x:Class="BiK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BiK"
+        mc:Ignorable="d"
+        Title="Б и К" Height="450" Width="300">
+    <Grid>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <TextBlock Width="30" Height="20" Text="10" TextAlignment="Center" x:Name="qwe"/>
+            
+        <TextBlock Width="200" Height="200" x:Name="Try"/>
+            
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <ComboBox Width="50" Height="50" SelectedIndex="0" x:Name="First">
+                    <TextBlock Text="0"/>
+                    <TextBlock Text="1"/>
+                    <TextBlock Text="2"/>
+                    <TextBlock Text="3"/>
+                    <TextBlock Text="4"/>
+                    <TextBlock Text="5"/>
+                    <TextBlock Text="6"/>
+                    <TextBlock Text="7"/>
+                    <TextBlock Text="8"/>
+                    <TextBlock Text="9"/>
+                </ComboBox>
+                <ComboBox Width="50" Height="50" SelectedIndex="0" x:Name="Second">
+                    <TextBlock Text="0"/>
+                    <TextBlock Text="1"/>
+                    <TextBlock Text="2"/>
+                    <TextBlock Text="3"/>
+                    <TextBlock Text="4"/>
+                    <TextBlock Text="5"/>
+                    <TextBlock Text="6"/>
+                    <TextBlock Text="7"/>
+                    <TextBlock Text="8"/>
+                    <TextBlock Text="9"/>
+                </ComboBox>
+                <ComboBox Width="50" Height="50" SelectedIndex="0" x:Name="Three">
+                    <TextBlock Text="0"/>
+                    <TextBlock Text="1"/>
+                    <TextBlock Text="2"/>
+                    <TextBlock Text="3"/>
+                    <TextBlock Text="4"/>
+                    <TextBlock Text="5"/>
+                    <TextBlock Text="6"/>
+                    <TextBlock Text="7"/>
+                    <TextBlock Text="8"/>
+                    <TextBlock Text="9"/>
+                </ComboBox>
+                <ComboBox Width="50" Height="50" SelectedIndex="0" x:Name="Four">
+                    <TextBlock Text="0"/>
+                    <TextBlock Text="1"/>
+                    <TextBlock Text="2"/>
+                    <TextBlock Text="3"/>
+                    <TextBlock Text="4"/>
+                    <TextBlock Text="5"/>
+                    <TextBlock Text="6"/>
+                    <TextBlock Text="7"/>
+                    <TextBlock Text="8"/>
+                    <TextBlock Text="9"/>
+                </ComboBox>
+            </StackPanel>
+        
+        <Button Width="100" Height="75" Click="proverka" Content="Проверить"/>
+    </StackPanel>
+    
+        
+        
+    </Grid>
+</Window>
