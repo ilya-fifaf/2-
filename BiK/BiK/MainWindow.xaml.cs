@@ -29,6 +29,7 @@ public partial class MainWindow : Window
         {
             MessageBox.Show("You lose!");
             Sbros();
+            result.Text = $"Ответ был {pass}";
             z = 1;
         }
         if (First.Text == pass[0].ToString() && Second.Text == pass[1].ToString() && Three.Text == pass[2].ToString() &&
@@ -36,6 +37,7 @@ public partial class MainWindow : Window
         {
             MessageBox.Show("WINNER!!!!!!!!");
             Sbros();
+            result.Text = $"Вы выиграли, ваш ответ: {pass}";
         }
         else
         {
@@ -64,6 +66,7 @@ public partial class MainWindow : Window
             if (z == 1)
             {
                 Sbros();
+                result.Text = $"Ответ был {pass}";
                 z = 0;
             }
         }
@@ -95,5 +98,7 @@ public partial class MainWindow : Window
         Three.SelectedIndex = 0;
         Four.SelectedIndex = 0;
         Try.Text = "";
+        result.Text = "";
+        pass = generation_password();
     }
 }

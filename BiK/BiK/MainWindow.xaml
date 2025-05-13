@@ -66,6 +66,7 @@
             </StackPanel>
         
         <Button Width="100" Height="75" Click="proverka" Content="Проверить"/>
+            <TextBlock x:Name="result"></TextBlock>
     </StackPanel>
     
         
