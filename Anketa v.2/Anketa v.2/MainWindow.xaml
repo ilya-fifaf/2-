@@ -1,0 +1,53 @@
+﻿<Window x:Class="Anketa_v._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Анкета" Height="600" Width="500">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Фамилия"/>
+            <TextBox x:Name="Family" PreviewTextInput="TextBox_PreviewTextInput"/>
+            
+            <TextBlock Text="Имя"/>
+            <TextBox x:Name="Name" PreviewTextInput="TextBox_PreviewTextInput"/>
+            
+            <TextBlock Text="Отчество"/>
+            <TextBox x:Name="LastName" PreviewTextInput="TextBox_PreviewTextInput"/>
+            
+            <TextBlock Text="Номер телефона"/>
+            <TextBox x:Name="Phone" PreviewTextInput="Phone_PreviewTextInput"/>
+
+            <TextBlock Text="Дата рождения"/>
+            <DatePicker x:Name="Day"/>
+
+            <TextBlock Text="Образование"/>
+            <ComboBox x:Name="Education">
+                <ComboBoxItem Content="9 класс"/>
+                <ComboBoxItem Content="11 класс"/>
+                <ComboBoxItem Content="шарага"/>
+                <ComboBoxItem Content="университет"/>
+            </ComboBox>
+
+            <TextBlock Text="Опыт"/>
+            <Slider x:Name="Exp" Minimum="0" Maximum="30" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            
+            <TextBlock Text="Навыки"/>
+            <CheckBox x:Name="Skills" Content="Работа с git"/>
+            <CheckBox x:Name="Skills1" Content="работа с серверами"/>
+            <CheckBox x:Name="Skills2" Content="работа с людьми"></CheckBox>
+
+            <TextBlock Text="Желаемая ЗП"/>
+            <TextBox x:Name="Oplata" PreviewTextInput="Oplata_OnPreviewTextInput"/>
+
+            <TextBlock Text="Предпочитаемый вид работы"/>
+            <RadioButton x:Name="RadioButton1" GroupName="zxc" Content="Офис"/>
+            <RadioButton x:Name="RadioButton2" GroupName="zxc" Content="Удаленка"/>
+            <RadioButton x:Name="RadioButton3" GroupName="zxc" Content="Гибрид"/>
+
+            <Button Width="100" Content="Сохранить" Height="40" Click="SaveInfo"/>
+
+            <TextBlock Text="Список анкет"/>
+            <ComboBox x:Name="ComboBoxAnket" SelectionChanged="ComboBoxAnket_SelectionChanged"/>
+            <TextBox x:Name="TextBoxOutput" Height="100" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
