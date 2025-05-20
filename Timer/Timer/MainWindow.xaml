@@ -1,0 +1,29 @@
+﻿<Window x:Class="Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer"
+        mc:Ignorable="d"
+        Title="манивиндов" Height="300" Width="300">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                <TextBox x:Name="HoursBox" PreviewTextInput="HoursBox_OnPreviewTextInput" Width="50" Margin="5" />
+                <TextBox x:Name="MinutesBox" PreviewTextInput="HoursBox_OnPreviewTextInput" Width="50" Margin="5" />
+                <TextBox x:Name="SecondsBox" PreviewTextInput="HoursBox_OnPreviewTextInput" Width="50" Margin="5" />
+            </StackPanel>
+
+            <TextBlock x:Name="TimerDisplay" Text="00:00:00" FontSize="24" TextAlignment="Center" Margin="0 10"/>
+
+            <TextBlock x:Name="ErrorBlock" Foreground="Red" Text="" TextAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                <Button x:Name="StartButton" Content="Старт" Click="Start_Click"/>
+                <Button x:Name="PauseButton" Content="Пауза" Click="Pause_Click"/>
+                <Button x:Name="StopButton" Content="Стоп" Click="Stop_Click"/>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
