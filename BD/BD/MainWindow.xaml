@@ -1,0 +1,65 @@
+﻿<Window x:Class="BD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BD"
+        mc:Ignorable="d"
+        Title="мани" Height="450" Width="1200">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="SearchBox" Width="300" Margin="0,0,10,0" TextChanged="SearchBox_TextChanged"/>
+            <ComboBox x:Name="FilterCombo" SelectionChanged="FilterCombo_SelectionChanged">
+                <ComboBoxItem Content="Все" IsSelected="True"/>
+                <ComboBoxItem Content="Студент"/>
+                <ComboBoxItem Content="Преподаватель"/>
+                <ComboBoxItem Content="Сотрудник"/>
+            </ComboBox>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGri" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Доп. поле" x:Name="zxc" Binding="{Binding ExtraField}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding MiddleName}"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+            <ComboBox x:Name="AddTypeCombo" Width="130" SelectionChanged="AddTypeCombo_SelectionChanged">
+                <ComboBoxItem Content="Студент"/>
+                <ComboBoxItem Content="Преподаватель"/>
+                <ComboBoxItem Content="Сотрудник"/>
+            </ComboBox>
+
+            <!-- Дата рождения (только для студентов) -->
+            <StackPanel x:Name="DatePanel" Orientation="Vertical" Margin="10,0" Visibility="Collapsed">
+                <TextBlock Text="Дата рождения"/>
+                <DatePicker x:Name="BirthDatePicker" Width="120"/>
+            </StackPanel>
+
+            <!-- Поле для Предмета / Должности -->
+            <StackPanel x:Name="ExtraPanel" Orientation="Vertical" Margin="10,0">
+                <TextBlock x:Name="ExtraLabel" Text="Поле"/>
+                <TextBox x:Name="ExtraFieldBox" Width="120" PreviewTextInput="LastNameBox_OnPreviewTextInput"/>
+            </StackPanel>
+
+            <TextBox x:Name="LastNameBox" Width="100" Margin="10,0" PreviewTextInput="LastNameBox_OnPreviewTextInput"/>
+            <TextBox x:Name="FirstNameBox" Width="100" Margin="10,0" PreviewTextInput="LastNameBox_OnPreviewTextInput"/>
+            <TextBox x:Name="MiddleNameBox" Width="100" Margin="10,0" PreviewTextInput="LastNameBox_OnPreviewTextInput"/>
+            <TextBox x:Name="AddressBox" Width="150" Margin="10,0" PreviewTextInput="LastNameBox_OnPreviewTextInput" />
+            <TextBox x:Name="PhoneBox"  Width="120" Margin="10,0" PreviewTextInput="PhoneBox_OnPreviewTextInput" />
+            <Button Content="Добавить" Click="AddButton_Click" Margin="10,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
