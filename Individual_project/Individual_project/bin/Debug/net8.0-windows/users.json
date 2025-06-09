@@ -1,0 +1,14 @@
+[
+  {
+    "Login": "fifaf",
+    "Password": "qwe",
+    "Age": 25,
+    "Role": "Admin"
+  },
+  {
+    "Login": "user",
+    "Password": "user123",
+    "Age": 20,
+    "Role": "User"
+  }
+]

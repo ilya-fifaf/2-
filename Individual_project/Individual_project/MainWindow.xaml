@@ -64,7 +64,7 @@
 
             <TextBlock Text="Логин" FontSize="20" FontFamily="Arial Black" Margin="0, 20, 0, 4" MaxHeight="100"
                        MaxWidth="200" />
-            <TextBox x:Name="login" Style="{StaticResource TextBoxstyle}" FontSize="20" MaxLength="10"
+            <TextBox x:Name="login" Style="{StaticResource TextBoxstyle}" PreviewTextInput="Input_Restriction" FontSize="20" MaxLength="10"
                      VerticalContentAlignment="Center" MaxHeight="100" MaxWidth="300" MinHeight="30" MinWidth="300" />
 
             <TextBlock Text="Пароль" FontSize="20" FontFamily="Arial Black" Margin="0, 20, 0, 4" MaxHeight="100"

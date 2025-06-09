@@ -21,3 +21,10 @@ C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\refint
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\Individual_project.pdb
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\Individual_project.genruntimeconfig.cache
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\ref\Individual_project.dll
+C:\RayC\2-\Individual_project\Individual_project\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\Individual_project.csproj.AssemblyReference.cache
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\Individu.F0FD5A82.Up2Date
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\AdminWindow.g.cs
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\UserWindow.g.cs
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\AdminWindow.baml
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\UserWindow.baml
