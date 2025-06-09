@@ -1,12 +1,55 @@
 ﻿<Window x:Class="Individual_project.AdminWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:Individual_project"
-        mc:Ignorable="d"
-        Title="RayC - разработка ПО" Height="450" Width="800">
+        Title="Панель Администратора" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Список и редактирование услуг -->
+        <GroupBox Header="Услуги и цены" Margin="8">
+            <StackPanel>
+                <ListBox x:Name="ProductsList" Height="200" DisplayMemberPath="ProductName" SelectionChanged="ProductsList_SelectionChanged"/>
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                    <TextBox x:Name="ProductNameBox" Width="150" Margin="0,0,8,0" />
+                    <TextBox x:Name="ProductPriceBox" Width="80" Margin="0,0,8,0" />
+                    <Button Content="Добавить" Width="90" Click="AddProduct_Click"/>
+                    <Button Content="Изменить" Width="90" Margin="8,0,0,0" Click="EditProduct_Click"/>
+                    <Button Content="Удалить" Width="90" Margin="8,0,0,0" Click="DeleteProduct_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Просмотр и изменение заявок -->
+        <GroupBox Header="Заявки по услугам" Margin="8" Grid.Column="1">
+            <StackPanel>
+                <ComboBox x:Name="ServicesFilterBox" Width="230" Margin="0,0,0,8" SelectionChanged="ServicesFilterBox_SelectionChanged"/>
+                <ScrollViewer Height="320" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="RequestsList">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6" Margin="0,0,0,8" Padding="8">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Price, StringFormat='Цена: {0} ₽'}"/>
+                                        <TextBlock Text="{Binding UserLogin, StringFormat='Пользователь: {0}'}"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                                            <TextBlock Text="Статус: "/>
+                                            <ComboBox Width="120" SelectedValue="{Binding Status, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="StatusChanged">
+                                                <ComboBoxItem Content="Ожидает"/>
+                                                <ComboBoxItem Content="Принято"/>
+                                                <ComboBoxItem Content="Отклонено"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>

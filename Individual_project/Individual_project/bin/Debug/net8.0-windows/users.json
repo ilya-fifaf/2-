@@ -21,7 +21,33 @@
     "Requests": [
       {
         "ProductName": "CRM-система RayC",
-        "Price": 59000
+        "Price": 59000,
+        "Status": "Отклонено"
+      },
+      {
+        "ProductName": "CRM-система RayC",
+        "Price": 59000,
+        "Status": null
+      },
+      {
+        "ProductName": "CRM-система RayC",
+        "Price": 59000,
+        "Status": null
+      },
+      {
+        "ProductName": "Корпоративный портал",
+        "Price": 110000,
+        "Status": null
+      },
+      {
+        "ProductName": "Автоматизация документооборота",
+        "Price": 49000,
+        "Status": null
+      },
+      {
+        "ProductName": "Система онлайн-обучения",
+        "Price": 85000,
+        "Status": null
       }
     ]
   }

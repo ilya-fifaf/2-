@@ -19,5 +19,10 @@ namespace Individual_project
                 RequestsList.ItemsSource = requests;
             }
         }
+
+        private void Oplata_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

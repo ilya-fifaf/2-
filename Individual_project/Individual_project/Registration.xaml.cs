@@ -117,4 +117,5 @@ public class UserRequest
 {
     public string ProductName { get; set; }
     public int Price { get; set; }
+    public string Status { get; set; } // Например: "Ожидает", "Принято", "Отклонено"
 }

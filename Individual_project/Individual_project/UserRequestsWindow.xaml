@@ -6,18 +6,25 @@
     <Grid Margin="16">
         <StackPanel>
             <TextBlock Text="Мои заявки" FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
-            <ItemsControl x:Name="RequestsList">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border Margin="0,0,0,8" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6">
-                            <StackPanel>
-                                <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Price, StringFormat='Цена: {0} ₽'}"/>
-                            </StackPanel>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="200">
+                <ItemsControl x:Name="RequestsList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="0,0,0,8" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                        <TextBlock Text="{Binding Price, StringFormat='Цена: {0} ₽'}" Margin="0,0,10,0"/>
+                                        <TextBlock Text="Статус: " />
+                                        <TextBlock Text="{Binding Status}" FontWeight="SemiBold" Foreground="#3197E9"/>
+                                        <Button Content="Оплатить" Click="Oplata_Click"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
             <TextBlock x:Name="EmptyText" Text="ПУСТО" FontSize="18" Foreground="Gray" 
                        HorizontalAlignment="Center" Margin="0,20,0,0" Visibility="Collapsed"/>
         </StackPanel>
