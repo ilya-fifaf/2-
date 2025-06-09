@@ -1,0 +1,75 @@
+﻿<Window x:Class="Individual_project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Individual_project"
+        mc:Ignorable="d"
+        Title="RayC - разработка ПО" MinHeight="400" MinWidth="400">
+    <Window.Resources>
+        <Style x:Key="RedText" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="7"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TextBoxstyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="7">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Margin="0"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PasswordBoxstyle" TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="7">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Margin="0"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MinHeight="200" MinWidth="400">
+            <Image Source="pack://application:,,,/logo.jpg" Height="100" Width="300"/>
+            
+            
+            <TextBlock Text="Логин" FontSize="20" FontFamily="Arial Black" Margin="0, 20, 0, 4" MaxHeight="100" MaxWidth="200"/>
+            <TextBox x:Name="login" Style="{StaticResource TextBoxstyle}" FontSize="20" MaxLength="10" VerticalContentAlignment="Center" MaxHeight="100" MaxWidth="300" MinHeight="30" MinWidth="300" />
+            
+            <TextBlock Text="Пароль" FontSize="20" FontFamily="Arial Black" Margin="0, 20, 0, 4" MaxHeight="100" MaxWidth="200"/>
+            <PasswordBox x:Name="Pass" Style="{StaticResource PasswordBoxstyle}" VerticalContentAlignment="Center"  MaxHeight="100" MaxWidth="300" MinHeight="30" MinWidth="300" />
+            
+            <Button Content="Войти" Style="{StaticResource RedText}" Background="Green" MaxHeight="300" FontSize="20" MinHeight="30" MaxWidth="200" Foreground="AliceBlue" Margin="0,30,0,10" Click="ButtonBase_OnClick" />
+            <Button Content="Регистрация" Style="{StaticResource RedText}" Background="Blue" FontSize="20" MaxHeight="200" MinHeight="20" MaxWidth="200" Foreground="AliceBlue" Click="Registration_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
