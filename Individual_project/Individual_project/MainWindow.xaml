@@ -81,6 +81,7 @@
                     Background="Blue" FontSize="20" MaxHeight="200" MinHeight="20"
                     MaxWidth="200" Foreground="AliceBlue"
                     Click="Registration_Click" />
+            
         </StackPanel>
     </Grid>
 </Window>

@@ -28,3 +28,9 @@ C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\AdminW
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\UserWindow.g.cs
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\AdminWindow.baml
 C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\UserWindow.baml
+C:\RayC\2-\Individual_project\Individual_project\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\RayC\2-\Individual_project\Individual_project\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\RayC\2-\Individual_project\Individual_project\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\RayCApp.g.cs
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\RayC\2-\Individual_project\Individual_project\obj\Debug\net8.0-windows\RayCApp.baml
