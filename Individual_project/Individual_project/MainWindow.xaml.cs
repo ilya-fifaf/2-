@@ -21,9 +21,9 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    private void Login_Click (object sender, RoutedEventArgs e)
     {
-        MessageBox.Show(login.Text);
+        
     }
 
     private void Registration_Click (object sender, RoutedEventArgs e)
