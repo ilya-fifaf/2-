@@ -1,0 +1,46 @@
+﻿<Window x:Class="rand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rand"
+        mc:Ignorable="d"
+        Title="Рандом" Height="500" Width="600">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Text="Random emae" FontSize="25"/>
+            <TextBlock Background="Beige" x:Name="ResultTextBlock" HorizontalAlignment="Center" Text="61" FontSize="25" TextWrapping="WrapWithOverflow" Width="300"/>
+            <Button Click="GenerateButton_Clicked" Margin="5" Content="Сгенерировать" Background="Green" Foreground="White" FontSize="30" FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center" Text="Выберите количество случайных чисел" FontSize="12" FontFamily="Arial"/>
+            <Slider x:Name="GetCountNumbersSlider" Minimum="1" Maximum="50" 
+                     ValueChanged="Slider_SetCountNumbers"/>
+            <TextBlock x:Name="NumbersCounter" HorizontalAlignment="Center" Text="Выбранное кол-во чисел 1" FontSize="12" FontFamily="Arial"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <RadioButton IsChecked="True" x:Name="RangeRadioButton" Checked="RangeRadioButton_Checked" Grid.Column="0" Content="из диапазона" FontSize="15" VerticalAlignment="Center"/>
+                
+                <RadioButton x:Name="ListRadioButton" Checked="ListRadioButton_Checked" Grid.Column="2" Content="из списка" FontSize="15" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="RangePanel" Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox PreviewTextInput="OnlyInts_PreviewTextInput" Text="1" PreviewKeyDown="CloseSpaceInput_PreviewKeyDown" x:Name="StartRange" Grid.Column="0" Margin="5" Tag="От"/>
+                <TextBox PreviewTextInput="OnlyInts_PreviewTextInput" Text="100" PreviewKeyDown="CloseSpaceInput_PreviewKeyDown" x:Name="FinishRange" Grid.Column="1" Margin="5" Tag="До"/>
+            </Grid>
+            <Grid x:Name="ListPanelNumbers" Margin="0,15">
+                <TextBox PreviewTextInput="OnlyInts_PreviewTextInput" x:Name="ListPanelNumbersOfBox" Width="200" Height="100" Tag="Вводите сюда числа, деля их пробелами (1 2 3)"/>
+            </Grid>
+            <CheckBox Checked="ElliminationNumberBox_Checked" Unchecked="ElliminaitonNumberBox_UnChecked" x:Name="ElliminationAllNumbersBox" Content="Исключение" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+            <Grid x:Name="ElliminationAllNumbersPanel" Margin="0,10">
+                <TextBox PreviewTextInput="OnlyInts_PreviewTextInput" x:Name="ElliminationAllNumbersOfBox" Width="200" Height="100" Tag="Вводите сюда числа, деля их пробелами (1 2 3)"/>
+            </Grid>
+            <CheckBox x:Name="ElliminationRepeat" Content="Без повторения" HorizontalAlignment="Center" Margin="20" FontSize="15"/>
+        </StackPanel>
+    </Grid>
+</Window>
