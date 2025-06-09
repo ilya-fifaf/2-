@@ -8,6 +8,69 @@
         Title="RayC - разработка ПО" MinHeight="600" MinWidth="1100">
     <Grid>
         <local:RayCApp HorizontalAlignment="Stretch" VerticalAlignment="Top" />
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <local:RayCApp Grid.Row="0"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+               <StackPanel Orientation="Vertical" Margin="20">
+    <TextBlock Text="Наши продукты" FontSize="28" FontWeight="Bold" Margin="0,70,0,50"/>
+    <UniformGrid Columns="2" Rows="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+        <!-- Продукт 1 -->
+        <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">
+            <StackPanel>
+                <Image Source="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=formatfit=cropw=400q=80" Height="120" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                <TextBlock Text="CRM-система RayC" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Эффективное управление клиентами и задачами для вашего бизнеса. Гибкая настройка под любые процессы." TextWrapping="Wrap" Margin="0,4,0,0"/>
+                <TextBlock Text="Цена: 59 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+        <!-- Продукт 2 -->
+        <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">
+            <StackPanel>
+                <Image Source="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=formatfit=cropw=400q=80" Height="120" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                <TextBlock Text="Корпоративный портал" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Внутренняя платформа для коммуникации сотрудников, обмена файлами и совместной работы." TextWrapping="Wrap" Margin="0,4,0,0"/>
+                <TextBlock Text="Цена: 110 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+        <!-- Продукт 3 -->
+        <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">
+            <StackPanel>
+                <Image Source="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=formatfit=cropw=400q=80" Height="120" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                <TextBlock Text="Система онлайн-обучения" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Платформа для дистанционного обучения сотрудников, тестирования знаний и выдачи сертификатов." TextWrapping="Wrap" Margin="0,4,0,0"/>
+                <TextBlock Text="Цена: 85 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+        <!-- Продукт 4 -->
+        <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">
+            <StackPanel>
+                <Image Source="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=formatfit=cropw=400q=80" Height="120" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                <TextBlock Text="Автоматизация документооборота" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Модуль для электронного согласования, хранения и поиска документов с гибкой настройкой ролей." TextWrapping="Wrap" Margin="0,4,0,0"/>
+                <TextBlock Text="Цена: 49 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+        <!-- Продукт 5 -->
+        <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">
+            <StackPanel>
+                <Image Source="https://images.unsplash.com/photo-1461344577544-4e5dc9487184?auto=formatfit=cropw=400q=80" Height="120" Stretch="UniformToFill" Margin="0,0,0,10"/>
+                <TextBlock Text="Сервис аналитики бизнеса" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Интерактивные дашборды и отчёты для контроля ключевых показателей эффективности компании." TextWrapping="Wrap" Margin="0,4,0,0"/>
+                <TextBlock Text="Цена: 77 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+    </UniformGrid>
+</StackPanel>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
