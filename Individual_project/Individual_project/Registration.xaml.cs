@@ -111,4 +111,10 @@ public class Person
     public string Password { get; set; }
     public int Age { get; set; }
     public string Role { get; set; } = "User";
+    public List<UserRequest> Requests { get; set; } = new List<UserRequest>();
+}
+public class UserRequest
+{
+    public string ProductName { get; set; }
+    public int Price { get; set; }
 }

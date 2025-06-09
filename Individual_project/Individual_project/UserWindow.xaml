@@ -25,7 +25,7 @@
                 <TextBlock Text="CRM-система RayC" FontWeight="Bold" FontSize="18"/>
                 <TextBlock Text="Эффективное управление клиентами и задачами для вашего бизнеса. Гибкая настройка под любые процессы." TextWrapping="Wrap" Margin="0,4,0,0"/>
                 <TextBlock Text="Цена: 59 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
-                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0" Click="Tovar1_Click"/>
             </StackPanel>
         </Border>
         <!-- Продукт 2 -->
@@ -35,7 +35,7 @@
                 <TextBlock Text="Корпоративный портал" FontWeight="Bold" FontSize="18"/>
                 <TextBlock Text="Внутренняя платформа для коммуникации сотрудников, обмена файлами и совместной работы." TextWrapping="Wrap" Margin="0,4,0,0"/>
                 <TextBlock Text="Цена: 110 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
-                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0" Click="Tovar2_Click"/>
             </StackPanel>
         </Border>
         <!-- Продукт 3 -->
@@ -45,7 +45,7 @@
                 <TextBlock Text="Система онлайн-обучения" FontWeight="Bold" FontSize="18"/>
                 <TextBlock Text="Платформа для дистанционного обучения сотрудников, тестирования знаний и выдачи сертификатов." TextWrapping="Wrap" Margin="0,4,0,0"/>
                 <TextBlock Text="Цена: 85 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
-                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0" Click="Tovar3_Click"/>
             </StackPanel>
         </Border>
         <!-- Продукт 4 -->
@@ -55,7 +55,7 @@
                 <TextBlock Text="Автоматизация документооборота" FontWeight="Bold" FontSize="18"/>
                 <TextBlock Text="Модуль для электронного согласования, хранения и поиска документов с гибкой настройкой ролей." TextWrapping="Wrap" Margin="0,4,0,0"/>
                 <TextBlock Text="Цена: 49 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
-                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0" Click="Tovar4_Click"/>
             </StackPanel>
         </Border>
         <!-- Продукт 5 -->
@@ -65,7 +65,7 @@
                 <TextBlock Text="Сервис аналитики бизнеса" FontWeight="Bold" FontSize="18"/>
                 <TextBlock Text="Интерактивные дашборды и отчёты для контроля ключевых показателей эффективности компании." TextWrapping="Wrap" Margin="0,4,0,0"/>
                 <TextBlock Text="Цена: 77 000 ₽" FontWeight="SemiBold" Foreground="#2e7d32" Margin="0,6,0,0"/>
-                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0"/>
+                <Button Content="Заказать" Background="#3197E9" Foreground="White" Margin="0,10,0,0" Click="Tovar5_Click"/>
             </StackPanel>
         </Border>
     </UniformGrid>

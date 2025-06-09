@@ -51,6 +51,7 @@
                     Height="40"
                     Margin="0,0,12,0"
                     Background="#FFFFFFFF"
+                    Click="RequestsButton_Click"
                     Foreground="#FF2E5067"
                     FontWeight="SemiBold"
                     BorderThickness="0"

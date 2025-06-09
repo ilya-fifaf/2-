@@ -37,7 +37,7 @@ namespace Individual_project
                 return;
             }
 
-            if (newLogin != _originalLogin && !UserService.IsLoginUnique(newLogin, _originalLogin))
+            if (newLogin != _originalLogin && !UserService1.IsLoginUnique(newLogin, _originalLogin))
             {
                 ErrorText.Text = "Такой логин уже существует!";
                 return;
@@ -47,7 +47,7 @@ namespace Individual_project
             ResultPassword = newPassword;
 
             // Сохраняем изменения в JSON
-            UserService.UpdateUser(_originalLogin, newLogin, newPassword);
+            UserService1.UpdateUser(_originalLogin, newLogin, newPassword);
 
             DialogResult = true;
             Close();
@@ -63,7 +63,7 @@ namespace Individual_project
         }
     }
 }
-public static class UserService
+public static class UserService1
 {
     private static string FilePath => "users.json";
 

@@ -3,12 +3,26 @@
     "Login": "fifaf",
     "Password": "qwe",
     "Age": 25,
-    "Role": "Admin"
+    "Role": "Admin",
+    "Requests": []
   },
   {
     "Login": "user1",
     "Password": "user123",
     "Age": 20,
-    "Role": "User"
+    "Role": "User",
+    "Requests": []
+  },
+  {
+    "Login": "user",
+    "Password": "1",
+    "Age": 41,
+    "Role": "User",
+    "Requests": [
+      {
+        "ProductName": "CRM-система RayC",
+        "Price": 59000
+      }
+    ]
   }
 ]

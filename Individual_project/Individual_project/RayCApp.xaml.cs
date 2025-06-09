@@ -10,6 +10,18 @@ public partial class RayCApp : UserControl
         InitializeComponent();
     }
     
+    private void RequestsButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (App.CurrentUser == null)
+        {
+            MessageBox.Show("Вы не авторизованы!");
+            return;
+        }
+        var requests = UserService.GetRequests(App.CurrentUser.Login);
+        var wnd = new UserRequestsWindow(requests) { Owner = Window.GetWindow(this) };
+        wnd.ShowDialog();
+    }
+    
     private void ProfileButton_Click(object sender, RoutedEventArgs e)
     {
         // Здесь используйте логин текущего пользователя, например, "ilya"

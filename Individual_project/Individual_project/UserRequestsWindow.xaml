@@ -1,0 +1,25 @@
+﻿<Window x:Class="Individual_project.UserRequestsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мои заявки" Height="350" Width="400"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <StackPanel>
+            <TextBlock Text="Мои заявки" FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
+            <ItemsControl x:Name="RequestsList">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,0,0,8" Padding="8" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6">
+                            <StackPanel>
+                                <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Price, StringFormat='Цена: {0} ₽'}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock x:Name="EmptyText" Text="ПУСТО" FontSize="18" Foreground="Gray" 
+                       HorizontalAlignment="Center" Margin="0,20,0,0" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Window>
