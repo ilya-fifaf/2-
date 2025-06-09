@@ -58,6 +58,7 @@
                     />
             <Button Content="Личный кабинет"
                     Width="140"
+                    Click="ProfileButton_Click"
                     Height="40"
                     Background="#FFFFFFFF"
                     Foreground="#FF2E5067"

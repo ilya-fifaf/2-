@@ -38,7 +38,7 @@ public partial class MainWindow : Window
             MessageBox.Show("Пользователь с такими данными не найден!", "Ошибка входа", MessageBoxButton.OK, MessageBoxImage.Error);
             return;
         }
-
+        App.CurrentUser = UserService.GetUser(name);
         // Открываем окно в зависимости от роли
         if (user.Role == "Admin")
         {
@@ -51,7 +51,7 @@ public partial class MainWindow : Window
             userWindow.Show();
         }
 
-        // Закрываем текущее окно (например, MainWindow)
+        
         this.Close();
     }
 

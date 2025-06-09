@@ -16,7 +16,7 @@
             <local:RayCApp Grid.Row="0"/>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                <StackPanel Orientation="Vertical" Margin="20">
-    <TextBlock Text="Наши продукты" FontSize="28" FontWeight="Bold" Margin="0,70,0,50"/>
+    <TextBlock Text="Наши продукты" FontSize="28" FontWeight="Bold" Margin="0,20,0,50"/>
     <UniformGrid Columns="2" Rows="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
         <!-- Продукт 1 -->
         <Border Margin="8" Padding="12" CornerRadius="12" BorderBrush="#DDDDDD" BorderThickness="1" Background="White" Width="350">

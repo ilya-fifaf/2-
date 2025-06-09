@@ -9,4 +9,5 @@ namespace Individual_project;
 /// </summary>
 public partial class App : Application
 {
+    public static Person CurrentUser { get; set; }
 }
